@@ -74,9 +74,9 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `es`,
   meta: [],
-  description: ``,
+  description: `claudio moreno portfolio`,
 }
 
 SEO.propTypes = {

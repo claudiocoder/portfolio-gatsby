@@ -1,13 +1,20 @@
 import Typography from "typography"
+
 const typography = new Typography({
-    baseFontSize: "14px",
+    baseFontSize: "18px",
     baseLineHeight: 1.666,
-    headerFontFamily: [
-        "Roboto",
-        "Helvetica Neue",
-        "Arial",
-        "sans-serif",
+    googleFonts: [
+        {
+            name: "Chango",
+            styles: [],
+        },
+        {
+            name: "Roboto",
+            styles: [],
+        }
     ],
-    bodyFontFamily: ["Georgia", "serif"],
+    headerFontFamily: ["Chango"],
+    bodyFontFamily: ["Hanalei"],
 })
+
 export default typography

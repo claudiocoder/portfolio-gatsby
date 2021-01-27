@@ -1,22 +1,9 @@
 .profile-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
   min-height: 100vh;
-  align-items: center;
-  background: #0100a4; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #01004e,
-    #0100a4
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #01004e,
-    #0100a4
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   .image-profile {
     width: 400px;
@@ -25,11 +12,84 @@
     border-radius: 100%;
   }
 
-  .name {
+  .container-name {
+    margin-left: 24px;
+    margin-top: 16px;
     color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: "Chango", cursive;
     text-shadow: 1px 1px 2px black;
+    .name {
+      font-size: 3rem;
+      color: white;
+      text-shadow: -2px 4px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .subname {
+      margin-top: 4px;
+      font-size: 2rem;
+    }
+  }
+
+  .social-media-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    color: white;
     font-size: 32px;
-    margin-top: 8px;
+
+    a {
+      color: white;
+      margin-right: 20px;
+    }
+
+    a.icon:hover {
+      cursor: pointer;
+      color: #ff951d;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile-container {
+    .image-profile {
+      width: 300px;
+      height: 300px;
+      margin-top: 20%;
+    }
+
+    .container-name {
+      .name {
+        font-size: 1.5rem;
+      }
+      .subname {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .image-profile {
+      width: 200px;
+      height: 200px;
+      margin-top: 20%;
+    }
+
+    .container-name {
+      .name {
+        font-size: 1.25rem;
+      }
+      .subname {
+        font-size: 1rem;
+      }
+      .social-media-container {
+        justify-content: center;
+      }
+    }
   }
 }
